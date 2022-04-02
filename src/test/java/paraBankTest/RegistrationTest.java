@@ -1,24 +1,27 @@
-package paraBank;
+package paraBankTest;
 
-import basetest.environments.BaseUITest;
 import com.basic.data.RegistrationData;
 import com.basic.utils.TestDataReader;
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import paraBankPages.RegistrationPage;
+import pages.RegistrationPage;
+import testEnvironments.BaseUITest;
 
 public class RegistrationTest extends BaseUITest {
     RegistrationPage registrationPage = null;
 
-    @BeforeTest
+    @BeforeTest(alwaysRun = true)
     private void beforeClass() {
         registrationPage = new RegistrationPage();
     }
 
     @Test(priority = 1, dataProvider = "getData")
     private void usreRegistrationTest(RegistrationData registrationTestData) {
+
         registrationPage.navigateToRegistrationPage();
+        Assert.assertEquals(registrationPage.getRegPageTitle().getText(), commonData.getProperty("registrationPageTitle"), "Registration page is not loaded !");
         registrationPage.getFirstName().sendKeys(registrationTestData.getFirstName());
         registrationPage.getLastName().sendKeys(registrationTestData.getLastName());
         registrationPage.getAddress().sendKeys(registrationTestData.getAddress());
@@ -30,6 +33,7 @@ public class RegistrationTest extends BaseUITest {
         registrationPage.getUserName().sendKeys(registrationTestData.getUserName());
         registrationPage.getPassword().sendKeys(registrationTestData.getPassword());
         registrationPage.getConfirmPassword().sendKeys(registrationTestData.getPassword());
+
     }
 
     @DataProvider

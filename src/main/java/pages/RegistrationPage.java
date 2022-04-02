@@ -1,7 +1,6 @@
-package paraBankPages;
+package pages;
 
 import com.basic.actions.PreDefinedActions;
-import com.basic.data.RegistrationData;
 import com.basic.utils.ObjectReader;
 import org.openqa.selenium.WebElement;
 
@@ -11,7 +10,6 @@ public class RegistrationPage extends PreDefinedActions {
 
     PreDefinedActions preDefinedActions = new PreDefinedActions();
     private final Properties registrationProperties;
-    RegistrationData registrationData = new RegistrationData();
 
     public RegistrationPage() {
         registrationProperties = ObjectReader.getObjectRepository("Registration");
@@ -58,6 +56,10 @@ public class RegistrationPage extends PreDefinedActions {
     }
     public WebElement getState() {
         return getPageElement(registrationProperties.getProperty("state"));
+    }
+
+    public WebElement getRegPageTitle(){
+        return  getPageElement(registrationProperties.getProperty("registrationPageTitle"));
     }
 
 

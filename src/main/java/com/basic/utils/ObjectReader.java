@@ -11,9 +11,6 @@ import java.util.Properties;
 public class ObjectReader {
     private static final Logger LOGGER = LogManager.getLogger(ObjectReader.class);
 
-    public static void main(String[] args) {
-        getObjectRepository("Registration");
-    }
     public static Properties getObjectRepository(String fileName){
         Properties properties = new Properties();
         try {

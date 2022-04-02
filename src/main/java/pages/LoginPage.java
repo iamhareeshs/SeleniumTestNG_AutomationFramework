@@ -1,4 +1,4 @@
-package paraBankPages;
+package pages;
 
 public class LoginPage {
 }

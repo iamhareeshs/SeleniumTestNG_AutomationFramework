@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Parabank Suite" duration-ms="7353" started-at="2022-04-02T15:46:56Z" finished-at="2022-04-02T15:47:04Z">
+    <groups>
+    </groups>
+    <test name="registration page test" duration-ms="7353" started-at="2022-04-02T15:46:56Z" finished-at="2022-04-02T15:47:04Z">
+      <class name="paraBankTest.RegistrationTest">
+        <test-method status="PASS" signature="frameworkSetup()[pri:0, instance:paraBankTest.RegistrationTest@69b2283a]" name="frameworkSetup" is-config="true" duration-ms="9566" started-at="2022-04-02T21:16:47Z" finished-at="2022-04-02T21:16:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- frameworkSetup -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:paraBankTest.RegistrationTest@69b2283a]" name="beforeClass" is-config="true" duration-ms="16" started-at="2022-04-02T21:16:56Z" finished-at="2022-04-02T21:16:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="usreRegistrationTest(com.basic.data.RegistrationData)[pri:0, instance:paraBankTest.RegistrationTest@69b2283a]" name="usreRegistrationTest" duration-ms="2235" started-at="2022-04-02T21:16:58Z" data-provider="getData" finished-at="2022-04-02T21:17:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[RegistrationData(UserName=ericabing, Address=1st block, FirstName=Erica, State=Zeeland, Phone=s897854568, Zipcode=s49464, LastName=Bing, City=Amsterdam, SSN=s799005143, Password=Testing123@)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- usreRegistrationTest -->
+        <test-method status="PASS" signature="usreRegistrationTest(com.basic.data.RegistrationData)[pri:0, instance:paraBankTest.RegistrationTest@69b2283a]" name="usreRegistrationTest" duration-ms="1883" started-at="2022-04-02T21:17:00Z" data-provider="getData" finished-at="2022-04-02T21:17:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[RegistrationData(UserName=emmaross, Address=14th Street, FirstName=Emma, State=Vermont, Phone=s56656565568, Zipcode=s98989, LastName=Ross, City=Newyork, SSN=d878795454, Password=Emma@123)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- usreRegistrationTest -->
+        <test-method status="PASS" signature="usreRegistrationTest(com.basic.data.RegistrationData)[pri:0, instance:paraBankTest.RegistrationTest@69b2283a]" name="usreRegistrationTest" duration-ms="1909" started-at="2022-04-02T21:17:02Z" data-provider="getData" finished-at="2022-04-02T21:17:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[RegistrationData(UserName=benjhon, Address=12th Street, FirstName=Ben, State=Berlin, Phone=s8787878784, Zipcode=s987889, LastName=Jhon, City=Berlin, SSN=s454546, Password=Ben$897)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- usreRegistrationTest -->
+        <test-method status="PASS" signature="terminateDriver()[pri:0, instance:paraBankTest.RegistrationTest@69b2283a]" name="terminateDriver" is-config="true" duration-ms="135" started-at="2022-04-02T21:17:04Z" finished-at="2022-04-02T21:17:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- terminateDriver -->
+      </class> <!-- paraBankTest.RegistrationTest -->
+    </test> <!-- registration page test -->
+  </suite> <!-- Parabank Suite -->
+</testng-results>

@@ -3,7 +3,7 @@
 <suite name="Parabank Suite"   thread-count = "2">
     <test name="registration page test">
         <classes>
-        <class name="paraBank.RegistrationTest" />
+        <class name="paraBankTest.RegistrationTest" />
         </classes>
     </test>
 </suite>

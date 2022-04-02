@@ -2,23 +2,41 @@ package com.basic.actions;
 
 import com.basic.constants.CommonVariables;
 import com.basic.driver.DriverFactory;
-import com.google.common.base.Strings;;
+import com.google.common.base.Strings;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-
-import java.sql.Time;
 import java.time.Duration;
 import java.util.InputMismatchException;
-import java.util.concurrent.TimeUnit;
 
 public class PreDefinedActions {
     private static final Logger LOGGER = LogManager.getLogger(PreDefinedActions.class);
     public static WebDriverWait wait = new WebDriverWait(DriverFactory.driver, Duration.ofSeconds(CommonVariables.IMPLICITWAIT));
+
+    private static String getLocatorType(String locator) {
+        String locatorType = null;
+        if (!Strings.isNullOrEmpty(locator)) {
+            locatorType = locator.split(":")[0].trim();
+        } else {
+            LOGGER.error("Locator is missing in properties file !");
+        }
+        return locatorType;
+    }
+
+    private static String getLocatorValue(String locator) {
+
+        String locatorValue = null;
+        if (!Strings.isNullOrEmpty(locator)) {
+            locatorValue = locator.split(":")[1].trim();
+        } else {
+            LOGGER.error("Locator is missing in properties file !");
+        }
+        return locatorValue;
+    }
+
     public By getPageObject(String locator) {
         LOGGER.info("Starting method getPageObject");
         try {
@@ -60,37 +78,16 @@ public class PreDefinedActions {
         }
     }
 
-    private static String getLocatorType(String locator){
-        String locatorType = null;
-        if(!Strings.isNullOrEmpty(locator)) {
-            locatorType = locator.split(":")[0].trim();
-        }else{
-            LOGGER.error("Locator is missing in properties file !");
-        }
-        return locatorType;
-    }
-
-    private static String getLocatorValue(String locator){
-
-        String locatorValue = null;
-        if(!Strings.isNullOrEmpty(locator)) {
-            locatorValue = locator.split(":")[1].trim();
-        }else{
-            LOGGER.error("Locator is missing in properties file !");
-        }
-        return locatorValue;
-    }
-
-    public WebElement getPageElement(String locator){
+    public WebElement getPageElement(String locator) {
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(getPageObject(locator)));
         return element;
     }
 
-    public void clickElement(String locator){
+    public void clickElement(String locator) {
         try {
             WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(getPageObject(locator)));
             element.click();
-        }catch (Exception e) {
+        } catch (Exception e) {
             LOGGER.info("Element click failed ! " + e);
         }
     }
