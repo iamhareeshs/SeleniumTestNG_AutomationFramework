@@ -1,9 +1,10 @@
 # Selenium TestNG Automation Framework
 
-This automation framework is for parabank parasoft (https://parabank.parasoft.com/) test application Pre-requisite to execute test framework is the parabank application should be up and running.
+This automation framework is for parabank parasoft (https://parabank.parasoft.com/) test application.
+Pre-requisite to execute test framework is parabank application should be up and running.
 
 **Framework details:**
-It is a maven based project written in Selenium with Java following data driven development. Here is the explanation of various aspects of project directory,
+It is a maven project written in Selenium with Java following hydrid automation framework development approach. Here is the explanation of various aspects of project directory,
 
 1.	pom.xml - It is an XML file that contains configuration details used by Maven to build the project. 
 2.	testng.xml- This Xml file is in target/suites folder. It is used to invoke TestNG, suite name is specified along with testname. It will execute class files mentioned in class tags. 
