@@ -18,7 +18,7 @@ public class RegistrationTest extends BaseUITest {
     }
 
     @Test(priority = 1, dataProvider = "getData")
-    private void usreRegistrationTest(RegistrationData registrationTestData) {
+    private void userRegistrationTest(RegistrationData registrationTestData) {
 
         registrationPage.navigateToRegistrationPage();
         Assert.assertEquals(registrationPage.getRegPageTitle().getText(), commonData.getProperty("registrationPageTitle"), "Registration page is not loaded !");
