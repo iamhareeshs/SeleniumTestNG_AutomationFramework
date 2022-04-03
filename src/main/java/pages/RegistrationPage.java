@@ -9,7 +9,7 @@ import java.util.Properties;
 public class RegistrationPage extends PreDefinedActions {
 
     PreDefinedActions preDefinedActions = new PreDefinedActions();
-    private final Properties registrationProperties;
+    public final Properties registrationProperties;
 
     public RegistrationPage() {
         registrationProperties = ObjectReader.getObjectRepository("Registration");
@@ -62,5 +62,20 @@ public class RegistrationPage extends PreDefinedActions {
         return  getPageElement(registrationProperties.getProperty("registrationPageTitle"));
     }
 
+    public WebElement getRegisterButton(){
+        return  getPageElement(registrationProperties.getProperty("registerButton"));
+    }
+
+    public  WebElement getRegisterMessage(){
+        return  getPageElement(registrationProperties.getProperty("welcomeMessage"));
+    }
+
+    public  WebElement getLogoutButton(){
+        return  getPageElement(registrationProperties.getProperty("logoutButton"));
+    }
+
+    public String getRegistrationSuccessMessage(){
+        return  getRegisterMessage().getText().replace("\n", "").trim();
+    }
 
 }

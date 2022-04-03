@@ -1,5 +1,7 @@
 package paraBankTest;
 
+import com.basic.actions.CommonActions;
+import com.basic.actions.PreDefinedActions;
 import com.basic.data.RegistrationData;
 import com.basic.utils.TestDataReader;
 import org.testng.Assert;
@@ -10,34 +12,44 @@ import pages.RegistrationPage;
 import testEnvironments.BaseUITest;
 
 public class RegistrationTest extends BaseUITest {
-    RegistrationPage registrationPage = null;
+    RegistrationPage regPage = null;
+    CommonActions commonActions = new CommonActions();
 
     @BeforeTest(alwaysRun = true)
     private void beforeClass() {
-        registrationPage = new RegistrationPage();
+        regPage = new RegistrationPage();
     }
 
-    @Test(priority = 1, dataProvider = "getData")
-    private void userRegistrationTest(RegistrationData registrationTestData) {
+    @Test(priority = 1, dataProvider = "getRegTestData")
+    private void userRegistrationTest(RegistrationData registrationTestData) throws InterruptedException {
 
-        registrationPage.navigateToRegistrationPage();
-        Assert.assertEquals(registrationPage.getRegPageTitle().getText(), commonData.getProperty("registrationPageTitle"), "Registration page is not loaded !");
-        registrationPage.getFirstName().sendKeys(registrationTestData.getFirstName());
-        registrationPage.getLastName().sendKeys(registrationTestData.getLastName());
-        registrationPage.getAddress().sendKeys(registrationTestData.getAddress());
-        registrationPage.getCity().sendKeys(registrationTestData.getCity());
-        registrationPage.getState().sendKeys(registrationTestData.getState());
-        registrationPage.getZipcode().sendKeys(registrationTestData.getZipcode());
-        registrationPage.getPhone().sendKeys(registrationTestData.getPhone());
-        registrationPage.getSSN().sendKeys(registrationTestData.getSSN());
-        registrationPage.getUserName().sendKeys(registrationTestData.getUserName());
-        registrationPage.getPassword().sendKeys(registrationTestData.getPassword());
-        registrationPage.getConfirmPassword().sendKeys(registrationTestData.getPassword());
+        try {
+            String userName = PreDefinedActions.getRandomString(7);
+            String expectedRegMessage = commonData.getProperty("registerSuccessMessage").replace("%name", userName);
+            regPage.navigateToRegistrationPage();
+            Assert.assertEquals(regPage.getRegPageTitle().getText(), commonData.getProperty("registrationPageTitle"), "Registration page is not loaded !");
+            regPage.getFirstName().sendKeys(registrationTestData.getFirstName());
+            regPage.getLastName().sendKeys(registrationTestData.getLastName());
+            regPage.getAddress().sendKeys(registrationTestData.getAddress());
+            regPage.getCity().sendKeys(registrationTestData.getCity());
+            regPage.getState().sendKeys(registrationTestData.getState());
+            regPage.getZipcode().sendKeys(registrationTestData.getZipcode());
+            regPage.getPhone().sendKeys(registrationTestData.getPhone());
+            regPage.getSSN().sendKeys(registrationTestData.getSSN());
+            regPage.getUserName().sendKeys(userName);
+            regPage.getPassword().sendKeys(registrationTestData.getPassword());
+            regPage.getConfirmPassword().sendKeys(registrationTestData.getPassword());
+            regPage.getRegisterButton().click();
+            Assert.assertEquals(regPage.getRegistrationSuccessMessage(), expectedRegMessage, "New user registration failed ! Register success message is not as expected.");
+        } catch (Exception e) {
 
+        } finally {
+            commonActions.logout();
+        }
     }
 
     @DataProvider
-    public Object[][] getData() {
+    public Object[][] getRegTestData() {
         return TestDataReader.fetchTestData(TestDataReader.fetchDataFromExcelSheet("Registration"), RegistrationData.class);
     }
 }

@@ -1,12 +1,13 @@
 package com.basic.driver;
 
-import com.basic.constants.CommonVariables;
 import com.basic.constants.CommonPaths;
+import com.basic.constants.CommonVariables;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
 import java.io.File;
 import java.time.Duration;
 

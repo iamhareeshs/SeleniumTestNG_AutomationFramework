@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Failed suite [Parabank Suite]">
+  <test name="registration page test(failed)">
+    <classes>
+      <class name="paraBankTest.RegistrationTest">
+        <methods>
+          <include name="userRegistrationTest"/>
+          <include name="frameworkSetup"/>
+          <include name="terminateDriver"/>
+        </methods>
+      </class> <!-- paraBankTest.RegistrationTest -->
+    </classes>
+  </test> <!-- registration page test(failed) -->
+</suite> <!-- Failed suite [Parabank Suite] -->
