@@ -19,5 +19,6 @@ Registration : Validate new user registration in parabank application
 1.	Run testng.xml - All class files are mentioned which covers above mentioned testcase.
 
 Notes:
-1.	Browser and app url are supplied from environment variables.
+1. Browser and app url are supplied from environment variables.
+   URL=https://parabank.parasoft.com/;BROWSER_TYPE=CHROME
 
