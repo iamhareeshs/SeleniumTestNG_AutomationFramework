@@ -1,7 +1,12 @@
 D:\MyAutomationWorks\Selenium_Testng_AutomationFramework\src\main\java\com\basic\utils\ObjectReader.java
 D:\MyAutomationWorks\Selenium_Testng_AutomationFramework\src\main\java\com\basic\driver\DriverFactory.java
-D:\MyAutomationWorks\Selenium_Testng_AutomationFramework\src\main\java\com\basic\paraBank\LoginPage.java
+D:\MyAutomationWorks\Selenium_Testng_AutomationFramework\src\main\java\com\basic\utils\TestDataReader.java
+D:\MyAutomationWorks\Selenium_Testng_AutomationFramework\src\main\java\com\basic\actions\CommonActions.java
 D:\MyAutomationWorks\Selenium_Testng_AutomationFramework\src\main\java\com\basic\actions\PreDefinedActions.java
 D:\MyAutomationWorks\Selenium_Testng_AutomationFramework\src\main\java\com\basic\constants\CommonVariables.java
-D:\MyAutomationWorks\Selenium_Testng_AutomationFramework\src\main\java\com\basic\paraBank\RegistrationPage.java
+D:\MyAutomationWorks\Selenium_Testng_AutomationFramework\src\main\java\com\basic\constants\CommonPaths.java
+D:\MyAutomationWorks\Selenium_Testng_AutomationFramework\src\main\java\com\basic\allure\AllureListener.java
 D:\MyAutomationWorks\Selenium_Testng_AutomationFramework\src\main\java\com\basic\utils\RetryFailedTestcases.java
+D:\MyAutomationWorks\Selenium_Testng_AutomationFramework\src\main\java\com\basic\data\RegistrationData.java
+D:\MyAutomationWorks\Selenium_Testng_AutomationFramework\src\main\java\pages\LoginPage.java
+D:\MyAutomationWorks\Selenium_Testng_AutomationFramework\src\main\java\pages\RegistrationPage.java

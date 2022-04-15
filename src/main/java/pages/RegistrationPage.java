@@ -8,7 +8,6 @@ import java.util.Properties;
 
 public class RegistrationPage extends PreDefinedActions {
 
-    PreDefinedActions preDefinedActions = new PreDefinedActions();
     public final Properties registrationProperties;
 
     public RegistrationPage() {
@@ -16,7 +15,7 @@ public class RegistrationPage extends PreDefinedActions {
     }
 
     public void navigateToRegistrationPage() {
-        preDefinedActions.clickElement(registrationProperties.getProperty("register"));
+        PreDefinedActions.clickElement(registrationProperties.getProperty("register"));
     }
 
     public WebElement getFirstName() {

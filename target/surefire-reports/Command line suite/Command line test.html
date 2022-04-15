@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>TestNG:  Command line test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Command line test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Apr 09 21:49:40 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>91 seconds (91909 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='paraBankTest.RegistrationTest.userRegistrationTest()'><b>userRegistrationTest</b><br>Test class: paraBankTest.RegistrationTest<br>Parameters: RegistrationData(UserName=ericabing, Address=1st block, FirstName=Erica, State=Zeeland, Phone=s897854568, Zipcode=s49464, LastName=Bing, City=Amsterdam, SSN=s799005143, Password=Testing123@)</td>
+<td></td>
+<td>30</td>
+<td>paraBankTest.RegistrationTest@5d0a1059</td></tr>
+<tr>
+<td title='paraBankTest.RegistrationTest.userRegistrationTest()'><b>userRegistrationTest</b><br>Test class: paraBankTest.RegistrationTest<br>Parameters: RegistrationData(UserName=emmaross, Address=14th Street, FirstName=Emma, State=Vermont, Phone=s56656565568, Zipcode=s98989, LastName=Ross, City=Newyork, SSN=d878795454, Password=Emma@123)</td>
+<td></td>
+<td>30</td>
+<td>paraBankTest.RegistrationTest@5d0a1059</td></tr>
+<tr>
+<td title='paraBankTest.RegistrationTest.userRegistrationTest()'><b>userRegistrationTest</b><br>Test class: paraBankTest.RegistrationTest<br>Parameters: RegistrationData(UserName=benjhon, Address=12th Street, FirstName=Ben, State=Berlin, Phone=s8787878784, Zipcode=s987889, LastName=Jhon, City=Berlin, SSN=s454546, Password=Ben$897)</td>
+<td></td>
+<td>30</td>
+<td>paraBankTest.RegistrationTest@5d0a1059</td></tr>
+</table><p>
+</body>
+</html>

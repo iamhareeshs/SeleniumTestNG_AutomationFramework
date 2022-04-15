@@ -39,7 +39,7 @@ public class PreDefinedActions extends  DriverFactory{
         return locatorValue;
     }
 
-    public By getPageObject(String locator) {
+    public static By getPageObject(String locator) {
         LOGGER.info("Starting method getPageObject");
         try {
             String locatorType = getLocatorType(locator);
@@ -85,7 +85,7 @@ public class PreDefinedActions extends  DriverFactory{
         return element;
     }
 
-    public void clickElement(String locator) {
+    public static void clickElement(String locator) {
         try {
             WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(getPageObject(locator)));
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);

@@ -1,0 +1,12 @@
+com\basic\driver\DriverFactory.class
+pages\LoginPage.class
+com\basic\utils\TestDataReader.class
+com\basic\utils\ObjectReader.class
+com\basic\actions\CommonActions.class
+com\basic\actions\PreDefinedActions.class
+com\basic\data\RegistrationData.class
+com\basic\constants\CommonVariables.class
+com\basic\utils\RetryFailedTestcases.class
+pages\RegistrationPage.class
+com\basic\constants\CommonPaths.class
+com\basic\allure\AllureListener.class

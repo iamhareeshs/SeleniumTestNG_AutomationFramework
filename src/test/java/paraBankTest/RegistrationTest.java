@@ -2,14 +2,19 @@ package paraBankTest;
 
 import com.basic.actions.CommonActions;
 import com.basic.actions.PreDefinedActions;
+import com.basic.allure.AllureListener;
 import com.basic.data.RegistrationData;
 import com.basic.utils.TestDataReader;
 import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.RegistrationPage;
 import testEnvironments.BaseUITest;
+
+import java.io.IOException;
 
 public class RegistrationTest extends BaseUITest {
     RegistrationPage regPage = null;
@@ -40,11 +45,19 @@ public class RegistrationTest extends BaseUITest {
             regPage.getPassword().sendKeys(registrationTestData.getPassword());
             regPage.getConfirmPassword().sendKeys(registrationTestData.getPassword());
             regPage.getRegisterButton().click();
-            Assert.assertEquals(regPage.getRegistrationSuccessMessage(), expectedRegMessage, "New user registration failed ! Register success message is not as expected.");
+            Assert.assertEquals(regPage.getRegistrationSuccessMessage(), expectedRegMessage , "New user registration failed ! Register success message is not as expected.");
         } catch (Exception e) {
 
         } finally {
             commonActions.logout();
+        }
+    }
+
+    @AfterMethod
+    private void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
+        if (testResult.getStatus() == ITestResult.FAILURE) {
+            AllureListener.addScreenshotInAllureReport("Failure in registration page !");
+
         }
     }
 
