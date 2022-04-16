@@ -10,8 +10,8 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <BrowserName>CHROME</BrowserName>
-        <URL>http://yardly.com</URL>
+        <BrowserName></BrowserName>
+        <URL></URL>
         <suiteXmlFile></suiteXmlFile>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -88,5 +88,4 @@
         </plugins>
         <finalName>${project.artifactId}-${project.version}</finalName>
     </build>
-
 </project>
