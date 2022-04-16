@@ -20,6 +20,7 @@ public class BaseUITest extends DriverFactory {
     public void frameworkSetup(){
         String browserType = System.getProperty("browserName") == null? "CHROME" : System.getProperty("browserName");
         String url = System.getProperty("url") == null? "https://parabank.parasoft.com/" : System.getProperty("url");
+        System.out.println("url ? " + url);
         setDriver(browserType, url);
         LOGGER.info( browserType+ " browser launched successfully!");
     }
