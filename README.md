@@ -20,7 +20,4 @@ Registration : Validate new user registration in parabank application
    mvn clean install  test -Durl="https://parabank.parasoft.com/" -DbrowserName="CHROME"  -Dsu
    iteXmlFile="testng.xml" (This test running in chrome browser for environment "https://parabank.parasoft.com/")
 
-Notes:
-1. Browser and app url are supplied from environment variables.
-   URL=https://parabank.parasoft.com/;BROWSER_TYPE=CHROME
 

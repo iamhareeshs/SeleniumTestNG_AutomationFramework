@@ -12,7 +12,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <BrowserName></BrowserName>
         <URL></URL>
-        <suiteXmlFile></suiteXmlFile>
+        <suiteXmlFile>testng.xml</suiteXmlFile>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
