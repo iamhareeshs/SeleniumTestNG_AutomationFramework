@@ -18,8 +18,8 @@ public class BaseUITest extends DriverFactory {
 
     @BeforeSuite(alwaysRun = true)
     public void frameworkSetup(){
-        String browserType = System.getenv("BROWSER_TYPE") == null? "CHROME" : System.getenv("BROWSER_TYPE");
-        String url = System.getenv("URL") == null? "https://www.google.co.in/" : System.getenv("URL");
+        String browserType = System.getProperty("browserName") == null? "CHROME" : System.getProperty("browserName");
+        String url = System.getProperty("url") == null? "https://parabank.parasoft.com/" : System.getProperty("url");
         setDriver(browserType, url);
         LOGGER.info( browserType+ " browser launched successfully!");
     }

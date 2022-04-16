@@ -16,7 +16,9 @@ It is a maven project written in Selenium with Java following hydrid automation 
 Registration : Validate new user registration in parabank application 
 
 **To execute test from intelliJ / Eclipse :**
-1.	Run testng.xml - All class files are mentioned which covers above mentioned testcase.
+1. From commandline
+   mvn clean install  test -Durl="https://parabank.parasoft.com/" -DbrowserName="CHROME"  -Dsu
+   iteXmlFile="testng.xml" (This test running in chrome browser for environment "https://parabank.parasoft.com/")
 
 Notes:
 1. Browser and app url are supplied from environment variables.
