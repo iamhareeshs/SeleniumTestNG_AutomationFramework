@@ -96,7 +96,6 @@ public class PreDefinedActions extends  DriverFactory{
     }
 
     public static String getRandomString(int length) {
-        System.out.println(RandomStringUtils.random(length));
         return RandomStringUtils.randomAlphabetic(length);
     }
 

@@ -27,8 +27,6 @@ public class RegistrationTest extends BaseUITest {
 
     @Test(priority = 1, dataProvider = "getRegTestData")
     private void userRegistrationTest(RegistrationData registrationTestData) throws InterruptedException {
-
-        try {
             String userName = PreDefinedActions.getRandomString(7);
             String expectedRegMessage = commonData.getProperty("registerSuccessMessage").replace("%name", userName);
             regPage.navigateToRegistrationPage();
@@ -46,18 +44,13 @@ public class RegistrationTest extends BaseUITest {
             regPage.getConfirmPassword().sendKeys(registrationTestData.getPassword());
             regPage.getRegisterButton().click();
             Assert.assertEquals(regPage.getRegistrationSuccessMessage(), expectedRegMessage , "New user registration failed ! Register success message is not as expected.");
-        } catch (Exception e) {
-
-        } finally {
-            commonActions.logout();
-        }
     }
 
     @AfterMethod
     private void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
+        commonActions.logout();
         if (testResult.getStatus() == ITestResult.FAILURE) {
             AllureListener.addScreenshotInAllureReport("Failure in registration page !");
-
         }
     }
 
