@@ -41,7 +41,6 @@ public class PreDefinedActions extends  DriverFactory{
     }
 
     public static By getPageObject(String locator) {
-        LOGGER.info("Starting method getPageObject");
         try {
             String locatorType = getLocatorType(locator);
             String locatorVal = getLocatorValue(locator);

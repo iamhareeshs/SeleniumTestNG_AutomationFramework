@@ -16,13 +16,10 @@ public class BaseUITest extends DriverFactory {
 
     @BeforeSuite(alwaysRun = true)
     public void frameworkSetup(){
-        LOGGER.info("browserName ? " + System.getProperty("browserName"));
-        if (System.getProperty("browserName") == null){
-            LOGGER.info("browser name is null");
-        }
-        String browserType = System.getProperty("browserName").trim() == null? "CHROME" : System.getProperty("browserName");
-        String url = System.getProperty("url").trim() == ""? "https://parabank.parasoft.com/" : System.getProperty("url");
+        String browserType = System.getProperty("browserName") == null? "CHROME" : System.getProperty("browserName");
+        String url = System.getProperty("url") == null? "https://parabank.parasoft.com/" : System.getProperty("url");
         setDriver(browserType, url);
+        LOGGER.info( browserType+ " browser launched successfully!");
     }
 
     @AfterSuite(alwaysRun = true)
