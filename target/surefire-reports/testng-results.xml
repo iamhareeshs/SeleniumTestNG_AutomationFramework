@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Parabank test suite" duration-ms="12850" started-at="2022-04-16T07:37:27Z" finished-at="2022-04-16T07:37:40Z">
+  <suite name="Parabank test suite" duration-ms="11268" started-at="2022-04-17T07:12:54Z" finished-at="2022-04-17T07:13:05Z">
     <groups>
     </groups>
-    <test name="Registration page test" duration-ms="12850" started-at="2022-04-16T07:37:27Z" finished-at="2022-04-16T07:37:40Z">
+    <test name="Registration page test" duration-ms="11268" started-at="2022-04-17T07:12:54Z" finished-at="2022-04-17T07:13:05Z">
       <class name="paraBankTest.RegistrationTest">
-        <test-method status="PASS" signature="frameworkSetup()[pri:0, instance:paraBankTest.RegistrationTest@2e8b24a1]" name="frameworkSetup" is-config="true" duration-ms="8540" started-at="2022-04-16T13:07:19Z" finished-at="2022-04-16T13:07:27Z">
+        <test-method status="PASS" signature="frameworkSetup()[pri:0, instance:paraBankTest.RegistrationTest@37d0d373]" name="frameworkSetup" is-config="true" duration-ms="6987" started-at="2022-04-17T12:42:47Z" finished-at="2022-04-17T12:42:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- frameworkSetup -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:paraBankTest.RegistrationTest@2e8b24a1]" name="beforeClass" is-config="true" duration-ms="44" started-at="2022-04-16T13:07:27Z" finished-at="2022-04-16T13:07:27Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:paraBankTest.RegistrationTest@37d0d373]" name="beforeClass" is-config="true" duration-ms="14" started-at="2022-04-17T12:42:54Z" finished-at="2022-04-17T12:42:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="userRegistrationTest(com.basic.data.RegistrationData)[pri:0, instance:paraBankTest.RegistrationTest@2e8b24a1]" name="userRegistrationTest" duration-ms="4642" started-at="2022-04-16T13:07:29Z" data-provider="getRegTestData" finished-at="2022-04-16T13:07:33Z">
+        <test-method status="PASS" signature="userRegistrationTest(com.basic.data.RegistrationData)[pri:0, instance:paraBankTest.RegistrationTest@37d0d373]" name="userRegistrationTest" duration-ms="3374" started-at="2022-04-17T12:42:55Z" data-provider="getRegTestData" finished-at="2022-04-17T12:42:58Z">
           <params>
             <param index="0">
               <value>
@@ -26,18 +26,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userRegistrationTest -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:paraBankTest.RegistrationTest@2e8b24a1]" name="takeScreenShotOnFailure" is-config="true" duration-ms="388" started-at="2022-04-16T13:07:33Z" finished-at="2022-04-16T13:07:34Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:paraBankTest.RegistrationTest@37d0d373]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1103" started-at="2022-04-17T12:42:58Z" finished-at="2022-04-17T12:42:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=userRegistrationTest status=SUCCESS method=RegistrationTest.userRegistrationTest(com.basic.data.RegistrationData)[pri:0, instance:paraBankTest.RegistrationTest@2e8b24a1] output={null}]]]>
+                <![CDATA[[TestResult name=userRegistrationTest status=SUCCESS method=RegistrationTest.userRegistrationTest(com.basic.data.RegistrationData)[pri:0, instance:paraBankTest.RegistrationTest@37d0d373] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="userRegistrationTest(com.basic.data.RegistrationData)[pri:0, instance:paraBankTest.RegistrationTest@2e8b24a1]" name="userRegistrationTest" duration-ms="3192" started-at="2022-04-16T13:07:34Z" data-provider="getRegTestData" finished-at="2022-04-16T13:07:37Z">
+        <test-method status="PASS" signature="userRegistrationTest(com.basic.data.RegistrationData)[pri:0, instance:paraBankTest.RegistrationTest@37d0d373]" name="userRegistrationTest" duration-ms="2083" started-at="2022-04-17T12:42:59Z" data-provider="getRegTestData" finished-at="2022-04-17T12:43:01Z">
           <params>
             <param index="0">
               <value>
@@ -48,18 +48,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userRegistrationTest -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:paraBankTest.RegistrationTest@2e8b24a1]" name="takeScreenShotOnFailure" is-config="true" duration-ms="2" started-at="2022-04-16T13:07:37Z" finished-at="2022-04-16T13:07:37Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:paraBankTest.RegistrationTest@37d0d373]" name="takeScreenShotOnFailure" is-config="true" duration-ms="725" started-at="2022-04-17T12:43:01Z" finished-at="2022-04-17T12:43:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=userRegistrationTest status=SUCCESS method=RegistrationTest.userRegistrationTest(com.basic.data.RegistrationData)[pri:0, instance:paraBankTest.RegistrationTest@2e8b24a1] output={null}]]]>
+                <![CDATA[[TestResult name=userRegistrationTest status=SUCCESS method=RegistrationTest.userRegistrationTest(com.basic.data.RegistrationData)[pri:0, instance:paraBankTest.RegistrationTest@37d0d373] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="userRegistrationTest(com.basic.data.RegistrationData)[pri:0, instance:paraBankTest.RegistrationTest@2e8b24a1]" name="userRegistrationTest" duration-ms="3160" started-at="2022-04-16T13:07:37Z" data-provider="getRegTestData" finished-at="2022-04-16T13:07:40Z">
+        <test-method status="PASS" signature="userRegistrationTest(com.basic.data.RegistrationData)[pri:0, instance:paraBankTest.RegistrationTest@37d0d373]" name="userRegistrationTest" duration-ms="2084" started-at="2022-04-17T12:43:02Z" data-provider="getRegTestData" finished-at="2022-04-17T12:43:04Z">
           <params>
             <param index="0">
               <value>
@@ -70,18 +70,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userRegistrationTest -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:paraBankTest.RegistrationTest@2e8b24a1]" name="takeScreenShotOnFailure" is-config="true" duration-ms="2" started-at="2022-04-16T13:07:40Z" finished-at="2022-04-16T13:07:40Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:paraBankTest.RegistrationTest@37d0d373]" name="takeScreenShotOnFailure" is-config="true" duration-ms="726" started-at="2022-04-17T12:43:04Z" finished-at="2022-04-17T12:43:05Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=userRegistrationTest status=SUCCESS method=RegistrationTest.userRegistrationTest(com.basic.data.RegistrationData)[pri:0, instance:paraBankTest.RegistrationTest@2e8b24a1] output={null}]]]>
+                <![CDATA[[TestResult name=userRegistrationTest status=SUCCESS method=RegistrationTest.userRegistrationTest(com.basic.data.RegistrationData)[pri:0, instance:paraBankTest.RegistrationTest@37d0d373] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="terminateDriver()[pri:0, instance:paraBankTest.RegistrationTest@2e8b24a1]" name="terminateDriver" is-config="true" duration-ms="116" started-at="2022-04-16T13:07:40Z" finished-at="2022-04-16T13:07:40Z">
+        <test-method status="PASS" signature="terminateDriver()[pri:0, instance:paraBankTest.RegistrationTest@37d0d373]" name="terminateDriver" is-config="true" duration-ms="99" started-at="2022-04-17T12:43:05Z" finished-at="2022-04-17T12:43:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- terminateDriver -->

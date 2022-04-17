@@ -2,18 +2,18 @@ package com.basic.driver;
 
 import com.basic.constants.CommonPaths;
 import com.basic.constants.CommonVariables;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.time.Duration;
 
 
 public class DriverFactory {
-    private static final Logger LOGGER = LogManager.getLogger(DriverFactory.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(DriverFactory.class);
     public static WebDriver driver;
 
     public static void setDriver(String browserType, String appURL) {

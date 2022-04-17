@@ -2,12 +2,13 @@ package com.basic.utils;
 
 import com.basic.constants.CommonPaths;
 import com.google.gson.*;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.ArrayList;
@@ -16,7 +17,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class TestDataReader {
-    private static final Logger LOGGER = LogManager.getLogger(TestDataReader.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(TestDataReader.class);
 
     public static <T> Object[][] fetchTestData(String jsonData, Class<T> clazz) {
         List<T> dataObjects = getTestData(jsonData, clazz);
@@ -61,7 +62,7 @@ public class TestDataReader {
             Sheet sheet = workbook.getSheet(dataSheet);
             json = processTestDataSheet(sheet);
         } catch (Exception e) {
-            LOGGER.error(e);
+            LOGGER.error(e.toString());
         }
         json = "[  " + json + "    ]";
         return json;

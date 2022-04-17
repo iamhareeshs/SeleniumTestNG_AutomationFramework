@@ -1,15 +1,14 @@
 package com.basic.utils;
 
 import com.basic.constants.CommonPaths;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.FileReader;
 import java.util.Properties;
 
 public class ObjectReader {
-    private static final Logger LOGGER = LogManager.getLogger(ObjectReader.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ObjectReader.class);
 
     public static Properties getObjectRepository(String fileName){
         Properties properties = new Properties();
@@ -20,7 +19,7 @@ public class ObjectReader {
             fileReader.close();
 
         }catch (Exception e){
-            LOGGER.error(e);
+            LOGGER.error(e.toString());
         }
         return properties;
     }
