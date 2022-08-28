@@ -2,6 +2,7 @@ package com.basic.driver;
 
 import com.basic.constants.CommonPaths;
 import com.basic.constants.CommonVariables;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -33,8 +34,7 @@ public class DriverFactory {
     // Open chrome browser
     private static WebDriver initChromeDriver(String appURL) {
         LOGGER.info("Launching chrome browser !");
-        File chromeDriver = new File(CommonPaths.DRIVER_PATH + File.separator + "chromedriver.exe");
-        System.setProperty("webdriver.chrome.driver", chromeDriver.getAbsolutePath());
+        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.navigate().to(appURL);

@@ -13,7 +13,6 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.RegistrationPage;
 import testEnvironments.BaseUITest;
-
 import java.io.IOException;
 
 public class RegistrationTest extends BaseUITest {
@@ -21,7 +20,7 @@ public class RegistrationTest extends BaseUITest {
     CommonActions commonActions = new CommonActions();
 
     @BeforeTest(alwaysRun = true)
-    private void beforeClass() {
+    private void beforeClass() throws IOException {
         regPage = new RegistrationPage();
     }
 
